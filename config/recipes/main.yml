@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: birraleeblue
+name: birralee-main
 # description will be included in the image's metadata
 description: Custom uBlue fedora images for use at Birralee
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/bazzite
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -14,7 +14,7 @@ modules:
     files:
       - usr: /usr
           # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system 
+          # put configuration files you want in /etc/ on a booted system
           # in /usr/etc/ in the image. read more in files module reference.
 
   - type: rpm-ostree
@@ -23,8 +23,8 @@ modules:
       # - micro
       # - starship
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      #- firefox # default firefox removed in favor of flatpak
+      #- firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -35,6 +35,12 @@ modules:
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.mozilla.firefox
+        - com.google.Chrome
+        - org.onlyoffice.desktopeditors
+        - org.kde.okular
+        - org.gimp.GIMP
+        - org.kde.krita
+        - org.tenacityaudio.Tenacity
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
         # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
@@ -42,5 +48,9 @@ modules:
         # Installing different branches of the same Flatpak is not supported.
       remove:
         # - org.gnome.eog
+
+  - type: script
+    scripts:
+      - main.sh # will run config/scripts/library.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
