@@ -1,5 +1,9 @@
 ublue_variants:
-  - label: birralee-ict/birraleeblue
+  - label: birralee-ict/birralee-main
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: BirraleeBlue
+      - label: Birralee-Main
+  - label: birralee-ict/birralee-library
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: Birralee-Library
