@@ -1,0 +1,3 @@
+# Disable kde addons
+[KDE Action Restrictions][$i]
+ghns=false
