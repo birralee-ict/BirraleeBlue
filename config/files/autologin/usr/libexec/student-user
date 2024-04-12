@@ -3,6 +3,14 @@
 if ! grep student /etc/passwd; then
     useradd student
     echo -e 'student\nstudent\n' | passwd student
+
+    # Also fix grub since this might be the first boot
+    grub2-switch-to-blscfg
+    if [ -d /sys/firmware/efi ]; then
+      sudo grub2-mkconfig -o /etc/grub2-efi.cfg
+    else
+      sudo grub2-mkconfig -o /etc/grub2.cfg
+    fi
 fi
 
 if [ ! -d "/var/home/student" ]; then
