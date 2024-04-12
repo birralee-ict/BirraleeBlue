@@ -5,4 +5,6 @@ set -euo pipefail
 rpm-ostree override remove \
     steam \
     lutris \
-    goverlay
+    goverlay \
+    krfb \
+    kdeconnectd
