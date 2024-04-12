@@ -17,6 +17,7 @@ modules:
           # put configuration files you want in /etc/ on a booted system
           # in /usr/etc/ in the image. read more in files module reference.
       - lockdown/usr: /usr
+      - autologin/usr: /usr
 
   - type: bling
     install:
