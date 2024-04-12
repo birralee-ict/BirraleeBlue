@@ -1,0 +1,9 @@
+#!/bin/bash
+# Make sure student user exists
+if ! grep student /etc/passwd; then
+    useradd -p student student
+fi
+
+if [ ! -d "/var/home/student" ]; then
+    mkhomedir_helper student
+fi

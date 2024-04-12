@@ -1,0 +1,9 @@
+[Unit]
+Description=Creates student user if it is missing
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/student-user
+
+[Install]
+WantedBy=multi-user.target
