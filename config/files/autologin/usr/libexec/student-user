@@ -1,7 +1,8 @@
 #!/bin/bash
 # Make sure student user exists
 if ! grep student /etc/passwd; then
-    useradd -p student student
+    useradd student
+    echo -e 'student\nstudent\n' | passwd student
 fi
 
 if [ ! -d "/var/home/student" ]; then
