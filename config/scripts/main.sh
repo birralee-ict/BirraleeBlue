@@ -9,4 +9,5 @@ rpm-ostree override remove \
     krfb \
     krfb-libs \
     kde-connect \
+    kde-connect-libs \
     kdeconnectd
