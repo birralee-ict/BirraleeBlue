@@ -49,6 +49,12 @@ modules:
         # Installing different branches of the same Flatpak is not supported.
       remove:
         # - org.gnome.eog
+        - org.mozilla.firefox
+        - org.onlyoffice.desktopeditors
+        - org.kde.okular
+        - org.gimp.GIMP
+        - org.kde.krita
+        - org.tenacityaudio.Tenacity
 
   - type: script
     scripts:
