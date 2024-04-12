@@ -24,6 +24,7 @@ jobs:
           # !! Add your recipes here 
           - recipes/main.yml
           - recipes/library.yml
+          - recipes/chromebooks.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
