@@ -8,3 +8,6 @@ rpm-ostree override remove \
     kde-connect \
     kde-connect-libs \
     kdeconnectd
+
+# Enable student user generation
+systemctl enable student-user.service
