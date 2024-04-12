@@ -1,3 +1,13 @@
 # Disable kde addons
 [KDE Action Restrictions][$i]
 ghns=false
+
+[General]
+ColorScheme=BreezeDark
+
+[Icons]
+Theme=breeze-dark
+
+[KDE]
+widgetStyle=Breeze
+LookAndFeelPackage=org.kde.breezedark.desktop
