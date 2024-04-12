@@ -7,4 +7,6 @@ rpm-ostree override remove \
     lutris \
     goverlay \
     krfb \
+    krfb-libs \
+    kde-connect \
     kdeconnectd
