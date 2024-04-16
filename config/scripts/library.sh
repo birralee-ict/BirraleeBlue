@@ -8,3 +8,6 @@ rpm-ostree override remove \
     kde-connect \
     kde-connect-libs \
     kdeconnectd
+
+# Enable librarian user generation
+systemctl enable librarian-user.service

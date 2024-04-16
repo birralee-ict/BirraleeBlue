@@ -1,0 +1,9 @@
+[Unit]
+Description=Creates librarian user if it is missing
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/librarian-user
+
+[Install]
+WantedBy=multi-user.target

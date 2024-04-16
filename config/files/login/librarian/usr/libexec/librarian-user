@@ -1,0 +1,18 @@
+#!/bin/bash
+# Make sure librarian user exists
+if ! grep librarian /etc/passwd; then
+    useradd librarian
+    echo -e 'librarian\nlibrarian\n' | passwd student
+
+    # Also fix grub since this might be the first boot
+    grub2-switch-to-blscfg
+    if [ -d /sys/firmware/efi ]; then
+      sudo grub2-mkconfig -o /etc/grub2-efi.cfg
+    else
+      sudo grub2-mkconfig -o /etc/grub2.cfg
+    fi
+fi
+
+if [ ! -d "/var/home/librarian" ]; then
+    mkhomedir_helper librarian
+fi
