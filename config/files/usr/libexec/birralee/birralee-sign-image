@@ -1,0 +1,10 @@
+#!/bin/bash
+# If we are on an unsigned image (fresh install)
+if !  rpm-ostree status -b | grep ostree-unverified-registry; then
+    # Rebase to signed image
+    SIGN_URI=$(rpm-ostree status -b | grep -A1 "BootedDeployment:" | grep -v "BootedDeployment" | sed -E 's/● ostree-unverified-registry:(.+)/ostree-image-signed:\1/')
+    echo "Signing installation - This will take a while"
+    plymouth display-message --text="Signing installation - This will take a while" || true
+    # shellcheck disable=SC2086
+    echo rpm-ostree rebase -r $SIGN_URI
+fi

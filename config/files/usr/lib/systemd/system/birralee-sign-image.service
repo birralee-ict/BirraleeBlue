@@ -1,0 +1,9 @@
+[Unit]
+Description=Sign the installation if it is not signed
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/birralee/birralee-sign-image
+
+[Install]
+WantedBy=multi-user.target
