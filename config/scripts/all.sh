@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Enable ntp time server sync
-timedatectl set-ntp true
+systemctl enable systemd-timesyncd.service
 
 # Make sure image is signed
 systemctl enable birralee-sign-image.service
