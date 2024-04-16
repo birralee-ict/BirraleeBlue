@@ -27,5 +27,9 @@ rpm-ostree install \
     tuned-profiles-atomic \
     tuned-profiles-cpu-partitioning
 
+# Enable tuned and fix gui application name
+systemctl enable tuned.service
+sed -i 's@Name=tuned-gui@Name=TuneD Manager@g' /usr/share/applications/tuned-gui.desktop
+
 # Enable student user generation
 systemctl enable student-user.service
