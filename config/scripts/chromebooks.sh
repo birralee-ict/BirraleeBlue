@@ -3,6 +3,8 @@ set -euo pipefail
 
 # Remove things we do not want on the image
 rpm-ostree override remove \
+    podman \
+    distrobox \
     krfb \
     krfb-libs \
     kde-connect \
