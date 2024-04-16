@@ -7,7 +7,8 @@ rpm-ostree override remove \
     krfb-libs \
     kde-connect \
     kde-connect-libs \
-    kdeconnectd \
+    kdeconnectd && \
+rpm-ostree override remove \
     rygel \
     input-leap \
     solaar \
