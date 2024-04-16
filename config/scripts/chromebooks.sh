@@ -5,6 +5,7 @@ set -euo pipefail
 rpm-ostree override remove \
     podman \
     distrobox \
+    toolbox \
     krfb \
     krfb-libs \
     kde-connect \
