@@ -11,6 +11,3 @@ rpm-ostree override remove \
 
 # Enable librarian user generation
 systemctl enable librarian-user.service
-
-# Make sure image is signed
-systemctl enable birralee-sign-image.service

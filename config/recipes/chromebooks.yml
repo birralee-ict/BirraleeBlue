@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: birralee-chromebook
 # description will be included in the image's metadata
-description: Custom uBlue fedora images for use at Birralee School Library
+description: Custom uBlue fedora images for use at Birralee School Chromebooks
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
@@ -58,6 +58,7 @@ modules:
 
   - type: script
     scripts:
-      - chromebooks.sh # will run config/scripts/library.sh
+      - chromebooks.sh # will run config/scripts/chromebooks.sh
+      - all.sh # runs common commands that is shared across all images
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

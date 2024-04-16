@@ -11,6 +11,3 @@ rpm-ostree override remove \
 
 # Enable student user generation
 systemctl enable student-user.service
-
-# Make sure image is signed
-systemctl enable birralee-sign-image.service
