@@ -26,6 +26,10 @@ jobs:
           - recipes/library.yml
           - recipes/chromebooks.yml
     steps:
+       # Maximize build space
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v7
+
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.5
