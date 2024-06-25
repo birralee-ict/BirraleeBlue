@@ -7,6 +7,10 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: Birralee-Chromebook
+  - label: birralee-ict/birralee-chrome-laptop
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: Birralee-Chrome-Laptop
   - label: birralee-ict/birralee-library
     ks: /kickstart/ublue-os.ks
     flavors:
