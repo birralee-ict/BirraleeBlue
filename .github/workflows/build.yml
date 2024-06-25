@@ -25,6 +25,7 @@ jobs:
           - recipes/main.yml
           - recipes/library.yml
           - recipes/chromebooks.yml
+          - recipes/chrome-laptops.yml
     steps:
        # Maximize build space
       - name: Maximize build space
