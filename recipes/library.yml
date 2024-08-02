@@ -12,12 +12,15 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - usr: /usr
-          # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system
-          # in /usr/etc/ in the image. read more in files module reference.
-      - lockdown/usr: /usr
-      - login/librarian/usr: /usr
+        # copies files/system/shared/* into your image's /.
+        # put configuration files you want in /etc/ on a booted system
+        # in /usr/etc/ in the image. read more in files module reference.
+      - source: system/shared
+        destination: /
+      - source: system/lockdown
+        destination: /
+      - source: system/login/librarian
+        destination: /
 
   - type: bling
     install:
