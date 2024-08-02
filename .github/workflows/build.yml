@@ -22,10 +22,10 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipes/main.yml
-          - recipes/library.yml
-          - recipes/chromebooks.yml
-          - recipes/chrome-laptops.yml
+          - main.yml
+          - library.yml
+          - chromebooks.yml
+          - chrome-laptops.yml
     steps:
        # Maximize build space
       - name: Maximize build space
