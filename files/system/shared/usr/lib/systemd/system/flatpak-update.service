@@ -1,0 +1,6 @@
+[Unit]
+Description=Flatpak auto update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/birralee/flatpak-update
