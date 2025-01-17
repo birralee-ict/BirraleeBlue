@@ -2,7 +2,7 @@
 # Make sure librarian user exists
 if ! grep librarian /etc/passwd; then
     useradd librarian
-    echo -e 'librarian\nlibrarian\n' | passwd student
+    echo -e 'librarian\nlibrarian\n' | passwd librarian
 
     # Also fix grub since this might be the first boot
     grub2-switch-to-blscfg
