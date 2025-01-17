@@ -1,5 +1,5 @@
 [Unit]
-Description=Auto Update System Timer For Flatpak Update
+Description=Auto Update System Timer For Birralee Update
 Wants=network-online.target
 
 [Timer]

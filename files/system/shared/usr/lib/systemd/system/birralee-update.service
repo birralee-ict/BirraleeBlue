@@ -1,0 +1,6 @@
+[Unit]
+Description=Birralee auto update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/birralee/birralee-update

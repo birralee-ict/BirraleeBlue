@@ -5,7 +5,7 @@ set -euo pipefail
 systemctl enable systemd-timesyncd.service
 
 # Enable flatpak auto updater
-systemctl enable flatpak-update.timer
+#systemctl enable flatpak-update.timer
 
 # Make sure image is signed
 systemctl enable birralee-sign-image.service
