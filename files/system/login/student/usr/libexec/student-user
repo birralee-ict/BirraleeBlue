@@ -29,10 +29,15 @@ cat << PPD > /etc/tuned/ppd.conf
 [main]
 # The default PPD profile
 default=power-saver
+battery_detection=true
 
 [profiles]
 # PPD = TuneD
 power-saver=powersave
 balanced=balanced
 performance=throughput-performance
+
+[battery]
+# PPD = TuneD
+balanced=balanced-battery
 PPD
